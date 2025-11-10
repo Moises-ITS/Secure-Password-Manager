@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+</style>
+<div class="container mt-5 text-center">
+    <h2>Welcome, {{ session['username'] }}!</h2>
+    <p class="lead mt-2">Select an option from below</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{{ url_for('show_qr') }}" class="btn btn-success btn-lg">Show QR Code</a>
+        <a href="{{ url_for('logintime') }}" class="btn btn-secondary btn-lg">Show Logs</a>
+        <a href="{{ url_for('registerpw') }}" class="btn btn-secondary btn-lg">Register Password</a>
+        <a href="{{ url_for('viewpw') }}" class="btn btn-secondary btn-lg">See Password Vault</a>
+        <a href="{{ url_for('changepassword') }}" class="btn btn-secondary btn-lg">Change Account Password</a>
+    </div>
+        <a href="{{ url_for('index') }}" class="btn btn-success btn-lg position-absolute top-0 end-0 m-3">Logout</a>
+</div>
+
+{% endblock %}
