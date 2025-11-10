@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Password Vault</h2>
+    {% if vault_entries %}
+        <table class="table table-striped table-bordered shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>Site name</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Time Created</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for entry in vault_entries %}
+                <tr>
+                    <td>{{ entry.site_name }}</td>
+                    <td>{{ entry.site_username }}</td>
+                    <td><code>{{ entry.site_password }}</code></td>
+                    <td>{{ entry.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert aler-info text-center">
+            No Saved Passwords yet
+        </div>
+    {% endif %}
+    <div class="text-center mt-3">
+            <a href="{{ url_for('home') }}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
