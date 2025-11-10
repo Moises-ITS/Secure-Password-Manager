@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card mx-auto shadow p-4" style="max-width: 400px;">
+    <h3 class="text-center mb-4">Email Authentication</h3>
+    <form method="POST" action="{{ url_for('emailauth') }}">
+        <div class="mb-3">
+            <label for="username" class="form-label">Enter Token</label>
+            <input type="text" name="token" class="form-control" placeholder="Enter token from email" required>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg w-100">Login</button>
+    </form>
+    <p class="text-center mt-3">Need another code? <a href="{{ url_for('login') }}">Back to Login</a></p>
+</div>
+{% endblock %}
