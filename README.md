@@ -11,9 +11,6 @@ A secure Flask web app demonstrating multi-factor authentication (MFA) and a pas
 - Login audit logs & per-user password vault (encrypted)
 - Deployable to Render / Heroku / any WSGI host
 
-## Demo
-Live demo: https://totp-flask-app.onrender.com/  *(if deployed)*
-
 ## Features
 - Secure password hashing with bcrypt
 - Per-user TOTP secret encrypted on disk
