@@ -1,0 +1,8 @@
+Flask==3.1.2
+Flask-SQLAlchemy
+pyotp
+bcrypt
+cryptography
+qrcode
+email-validator
+python-dotenv
