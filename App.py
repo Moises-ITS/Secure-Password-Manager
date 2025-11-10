@@ -438,7 +438,7 @@ def login():
             flash(msg, "danger")
             return redirect(url_for("login"))
         return redirect(url_for("emailauth"))
-    return render_template("index.html")
+    return render_template("login.html")
 
 @app.route("/show_qr")
 def show_qr():
